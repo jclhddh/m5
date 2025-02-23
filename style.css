@@ -1,0 +1,384 @@
+body {
+    background: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    border-radius: 30px;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a.active, .navbar a:hover {
+    background: #ff6600;
+    color: #000000;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}
+.about-image {
+    width: 400px;   /* Adjust to desired width */
+    height: 400px;  /* Adjust to desired height */
+    border-radius: 10px; /* Optional: Rounded corners */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image */
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+#experience {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+}
+#experience h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    border-left: 3px solid #4CAF50;
+    padding-left: 20px;
+}
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+.timeline-item:hover {
+    background: #4CAF50;
+    transform: scale(1.05);
+}
+.timeline-icon {
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    background: #4CAF50;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.timeline-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.timeline-content h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.timeline-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.timeline-content span {
+    font-size: 0.9em;
+    color: #aaa;
+}
+/* Image zoom on hover */
+.project-image.zoom:hover {
+    transform: scale(1.3);
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background: #333333;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill:hover {
+    background: #ff6600;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #ff4500;
+}
+/* CSS for Contact Section */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+}
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 12px;
+    background: #e0e0e0;
+    color: #333;
+    transition: all 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #ffffff;
+    outline: 2px solid #4CAF50;
+}
+.contact-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.contact-form button i {
+    font-size: 1.2em;
+}
+.contact-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+/* CSS for Responsive Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+}
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 12px;
+    background: #e0e0e0;
+    color: #333;
+    transition: all 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #ffffff;
+    outline: 2px solid #4CAF50;
+}
+.contact-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.contact-form button i {
+    font-size: 1.2em;
+}
+.contact-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em;
+    }
+    .contact-form button {
+        font-size: 1em;
+    }
+}
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 1.8em;
+    }
+    #contact p {
+        font-size: 1em;
+    }
+    .contact-form button {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
